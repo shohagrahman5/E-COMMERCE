@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Reset Password</title>
+    <link rel="stylesheet" href="forget.css">
+</head>
+<body>
+    <div class="box">
+
+        <h2>Reset Admin Password</h2>
+
+        <div id="step-email" class="step active">
+            <label for="forgot-email">Admin Email:</label><br>
+            <input type="email" id="forgot-email" placeholder="Enter admin email"><br>
+            <p class="form-error" id="step-email-error"></p>
+            <button type="button" id="find-account-btn">Find Account</button>
+        </div>
+
+        <div id="step-reset" class="step">
+            <label id="security-question-label">Security Question:</label><br>
+            <input type="text" id="security-answer" placeholder="Your answer"><br>
+
+            <label for="new-password">New Password:</label><br>
+            <input type="password" id="new-password" placeholder="At least 4 characters"><br>
+
+            <label for="confirm-password">Confirm New Password:</label><br>
+            <input type="password" id="confirm-password" placeholder="Re-enter new password"><br>
+
+            <p class="form-error" id="step-reset-error"></p>
+            <button type="button" id="reset-password-btn">Reset Password</button>
+        </div>
+
+        <div id="step-done" class="step">
+            <p class="hint">Your password has been reset.</p>
+            <button type="button" id="go-to-login-btn">Go to Login</button>
+        </div>
+
+        <p><a href="admin.html">Back to Login</a></p>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

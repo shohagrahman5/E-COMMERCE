@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="title">Product Categories</h1>
+    <p class="title1">Select a category to view products.</p>
+    <div class="category-filter">
+    <label for="categoryFilter">Filter by category:</label>
+
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="ceiling-lights">Ceiling Lights</option>
+        <option value="chandeliers">Chandeliers</option>
+        <option value="bulbs">Bulbs</option>
+    </select>
+</div>
+
+    <div class="content">
+
+        <table width="100%" cellpadding="20">
+
+            <!-- ROW 1 -->
+            <tr>
+
+                <!-- Product 1 -->
+                <td align="center" data-product-card data-category="bulbs">
+
+                    <img src="bulb.jpg" width="250">
+
+                    <h2>Luxury Ceiling Lamp Bulb</h2>
+
+                    <h3>৳500</h3>
+
+                   
+
+                    <button onclick="orderProduct(
+                        'Luxury Ceiling Lamp',
+                        500,
+                        'quantity1'
+                    )">
+                        Order
+                    </button>
+
+                </td>
+
+
+                <!-- Product 2 -->
+                <td align="center" data-product-card data-category="bulbs">
+
+                    <img src="images.jpeg" width="250">
+
+                    <h2>Crystal Chandelier Bulb</h2>
+
+                    <h3>৳600</h3>
+
+                   
+
+                    <button onclick="orderProduct(
+                        'Crystal Chandelier',
+                        600,
+                        'quantity2'
+                    )">
+                        Order
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <!-- ROW 2 -->
+            <tr>
+
+                <!-- Product 3 -->
+                <td align="center" data-product-card data-category="ceiling-lights">
+
+                    <img
+                        src="Ceiling-Lamp-02-430x430.jpg"
+                        width="250"
+                    >
+
+                    <h2>Modern Ceiling Lamp</h2>
+
+                    <h3>৳10,000</h3>
+
+                    
+
+                    <button onclick="orderProduct(
+                        'Modern Ceiling Lamp',
+                        10000,
+                        'quantity3'
+                    )">
+                        Order
+                    </button>
+
+                </td>
+
+
+                <!-- Product 4 -->
+                <td align="center" data-product-card data-category="chandeliers">
+
+                    <img
+                        src="josephine-large-chandelier-chandelier-1190654661.webp"
+                        width="250"
+                    >
+
+                    <h2>Josephine Chandelier</h2>
+
+                    <h3>৳12,000</h3>
+
+                   
+
+                    <button onclick="orderProduct(
+                        'Josephine Chandelier',
+                        12000,
+                        'quantity4'
+                    )">
+                        Order
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <!-- ROW 3 -->
+            <tr>
+
+                <!-- Product 5 -->
+                <td align="center" data-product-card data-category="chandeliers">
+
+                    <img
+                        src="Luxury-Crystal-Dandelion-Chandelier-Light-for-Dining.jpg"
+                        width="250"
+                    >
+
+                    <h2>Dandelion Light</h2>
+
+                    <h3>৳15,000</h3>
+
+                    
+
+                    <button onclick="orderProduct(
+                        'Dandelion Light',
+                        15000,
+                        'quantity5'
+                    )">
+                        Order
+                    </button>
+
+                </td>
+
+
+                <!-- Product 6 -->
+                <td align="center" data-product-card data-category="chandeliers">
+
+                    <img
+                        src="Oaks-Aura-5-Light-Wood-Farmhouse-Drum-Chandelier-Dining-Room-Adjustable-Height-Pendant-Lighting_f9996005-172e-469f-a4e6-aa7d170120aa.10a6a6854ced491f46acce01c87d3c8f.avif"
+                        width="250"
+                    >
+
+                    <h2>Wood Chandelier</h2>
+
+                    <h3>৳18,000</h3>
+
+                    
+
+                    <button onclick="orderProduct(
+                        'Wood Chandelier',
+                        18000,
+                        'quantity6'
+                    )">
+                        Order
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

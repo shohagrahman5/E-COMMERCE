@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sajabo Products</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div class="logo1">
+
+        <h1 class="menu-btn" onclick="toggleMenu()">☰</h1>
+
+        <img class="logo2" src="logo.png" width="50">
+
+        <p class="title">Welcome to Sajabo</p>
+
+        <input
+            type="text"
+            class="search"
+            placeholder="Search Product"
+        >
+
+       <a href="login.html"> <button class="button">LOGIN</button></a>
+    </div>
+
+
+    <!-- Main -->
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <div id="sidebar" class="side3">
+
+            <ul class="side1">
+
+                <li>
+                    <a href="#"> Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="admin.html"> Admin</a>
+                </li>
+
+                <li>
+                    <a href="user.html"> User</a>
+                </li>
+
+                <li>
+                    <a href="catagory.html"> Category</a>
+                </li>
+
+                <li>
+                    <a href="review.html"> Client Reviews</a>
+                </li>
+
+                <li>
+                    <a href="help.html"> Help</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Product Area -->
+
+        <div class="content">
+
+            
+            <table width="100%" cellpadding="20" id="home-products-table">
+
+                <tbody id="home-products-body">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

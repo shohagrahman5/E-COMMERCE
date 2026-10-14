@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admindeshbird.css">
+</head>
+
+<body>
+
+    <div class="admin-dashboard">
+
+
+        <header>
+
+            <h2>💡 Shajabo Lighting — Admin</h2>
+
+            <button id="admin-logout" type="button">Log out</button>
+
+        </header>
+
+
+
+        <nav>
+
+            <a href="#reviews">Reviews</a>
+
+            <a href="#orders">Orders</a>
+
+            <a href="#customers">Customers</a>
+
+            <a href="#products">Products</a>
+
+        </nav>
+
+
+
+        <section id="reviews">
+
+            <h2>Pending Reviews</h2>
+
+            <div class="review">
+
+                <h3>
+                    Sadia R. ⭐⭐⭐⭐⭐
+                </h3>
+
+                <p>
+                    "The pendant lamp completely changed our living room."
+                </p>
+
+                <button>
+                    Approve
+                </button>
+
+                <button>
+                    Reject
+                </button>
+
+            </div>
+
+
+            <div class="review">
+
+                <h3>
+                    Rafi H. ⭐⭐⭐⭐
+                </h3>
+
+                <p>
+                    "Custom order took longer than expected."
+                </p>
+
+                <button>
+                    Approve
+                </button>
+
+                <button>
+                    Reject
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <section id="orders">
+
+            <h2>All Orders</h2>
+
+            <table border="1" width="100%">
+
+                <tr>
+
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>#1042</td>
+
+                    <td>Sadia R.</td>
+
+                    <td>Pendant Lamp</td>
+
+                    <td>Tk 1,500</td>
+
+                    <td>Delivered</td>
+
+                    <td>
+                        <button>Edit</button>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>#1041</td>
+
+                    <td>Rafi H.</td>
+
+                    <td>Wall Sconce</td>
+
+                    <td>Tk 1,200</td>
+
+                    <td>Processing</td>
+
+                    <td>
+                        <button>Edit</button>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>#1040</td>
+
+                    <td>Nadia K.</td>
+
+                    <td>LED Strip</td>
+
+                    <td>Tk 800</td>
+
+                    <td>Shipped</td>
+
+                    <td>
+                        <button>Edit</button>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+
+        <section>
+
+            <h2>Order #1041 — Rafi H.</h2>
+
+            <p>
+                Product: Wall Sconce × 1
+            </p>
+
+            <p>
+                Total: Tk 1,200
+            </p>
+
+            <p>
+                Customer Email: rafi@gmail.com
+            </p>
+
+            <p>
+                Address: House 12, Road 4, Dhanmondi, Dhaka
+            </p>
+
+
+            <label for="status">
+                Order Status:
+            </label>
+
+            <br><br>
+
+            <select id="status">
+
+                <option>Pending</option>
+
+                <option selected>
+                    Processing
+                </option>
+
+                <option>
+                    On the way
+                </option>
+
+                <option>
+                    Delivered.
+                </option>
+
+                <option>
+                    Cancelled
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <button>
+                Save Status
+            </button>
+
+        </section>
+
+
+
+        <section id="customers">
+
+            <h2>All Customers</h2>
+
+            <table border="1" width="100%">
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Total Orders</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>001</td>
+
+                    <td>Sadia R.</td>
+
+                    <td>sadia@gmail.com</td>
+
+                    <td>01700000000</td>
+
+                    <td>5</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>002</td>
+
+                    <td>Rafi H.</td>
+
+                    <td>rafi@gmail.com</td>
+
+                    <td>01800000000</td>
+
+                    <td>3</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>003</td>
+
+                    <td>Nadia K.</td>
+
+                    <td>nadia@gmail.com</td>
+
+                    <td>01900000000</td>
+
+                    <td>7</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+
+        <section id="products">
+
+            <h2>All Products</h2>
+
+            <button>
+                + Add Product
+            </button>
+
+
+            <table border="1" width="100%">
+
+                <tr>
+
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Action</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="Ceiling-Lamp-02-430x430.jpg"
+                            width="70"
+                            alt="Pendant Lamp"
+                        >
+                    </td>
+
+                    <td>Pendant Lamp</td>
+
+                    <td>Pendant Lights</td>
+
+                    <td>Tk 1,500</td>
+
+                    <td>
+
+                        <button>Edit</button>
+
+                        <button>Delete</button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="josephine-large-chandelier-chandelier-1190654661.webp"
+                            width="70"
+                            alt="Wall Sconce"
+                        >
+                    </td>
+
+                    <td>Wall Sconce</td>
+
+                    <td>Wall Lights</td>
+
+                    <td>Tk 1,200</td>
+
+                    <td>
+
+                        <button>Edit</button>
+
+                        <button>Delete</button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="Luxury-Crystal-Dandelion-Chandelier-Light-for-Dining.jpg"
+                            width="70"
+                            alt="LED Strip"
+                        >
+                    </td>
+
+                    <td>LED Strip</td>
+
+                    <td>Offers</td>
+
+                    <td>Tk 800</td>
+
+                    <td>
+
+                        <button>Edit</button>
+
+                        <button>Delete</button>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+
+        <section>
+
+            <h2 id="product-form-title">Add Product</h2>
+
+            <form id="product-form">
+
+                <input type="hidden" id="edit-product-id" value="">
+
+                <label for="product-name">
+                    Product Name
+                </label>
+
+                <br>
+
+                <input
+                    type="text"
+                    id="product-name"
+                    placeholder="e.g. Pendant Lamp"
+                >
+
+                <br><br>
+
+
+                <label for="price">
+                    Price (Tk)
+                </label>
+
+                <br>
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="e.g. 1500"
+                >
+
+                <br><br>
+
+
+                <label for="category">
+                    Category
+                </label>
+
+                <br>
+
+                <select id="category">
+
+                    <option>Chandeliers</option>
+
+                    <option>Pendant Lights</option>
+
+                    <option>Wall Lights</option>
+
+                    <option>Ceiling Lights</option>
+
+                </select>
+
+                <br><br>
+
+
+                <label for="product-image">
+                    Product Image
+                </label>
+
+                <br>
+
+                <input
+                    type="file"
+                    id="product-image"
+                >
+
+                <br><br>
+
+
+                <label for="description">
+                    Description
+                </label>
+
+                <br>
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Short product description"
+                ></textarea>
+
+                <br><br>
+
+
+                <button type="submit">
+                    Save Product
+                </button>
+
+                <button type="button" id="cancel-product-edit" style="display:none;">
+                    Cancel Edit
+                </button>
+
+            </form>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

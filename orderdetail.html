@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Place Order</title>
+
+    <link rel="stylesheet" href="order.css">
+
+</head>
+
+<body>
+
+    <div class="order-box">
+
+        <h1>Place Your Order</h1>
+
+
+        <form autocomplete="off">
+
+
+
+            <label>Name:</label>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <br><br>
+
+
+
+            <label>Email:</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <br><br>
+
+
+           
+
+            <label>Phone:</label>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+            <br><br>
+
+
+            
+
+            <label>Address:</label>
+
+            <br>
+
+            <textarea
+                name="address"
+                rows="4"
+                placeholder="Enter your address"
+                required
+            ></textarea>
+
+            <br><br>
+
+
+
+            <label>Product:</label>
+
+            <input
+                type="text"
+                id="product"
+                readonly
+            >
+
+            <br><br>
+
+
+        
+
+            <label>Price per item:</label>
+
+            <input
+                type="text"
+                id="price"
+                readonly
+            >
+
+            <br><br>
+
+
+            
+
+            <label>Quantity:</label>
+
+            <input
+                type="number"
+                id="quantity"
+                value="1"
+                min="1"
+                max="10"
+                onchange="calculateTotal()"
+                oninput="calculateTotal()"
+            >
+
+            <br><br>
+
+
+
+            <label>Total Price:</label>
+
+            <input
+                type="text"
+                id="total"
+                readonly
+            >
+
+            <br><br>
+
+
+      
+
+            <label>Payment Method:</label>
+
+            <select name="payment" id="payment-method">
+
+                <option>Cash on Delivery</option>
+
+            
+
+                <option value="bKash">bKash</option>
+
+            </select>
+
+            <br><br>
+
+
+            
+
+            <button type="submit">
+                Place Order
+            </button>
+
+
+        </form>
+
+    </div>
+
+   
+    <div id="bkash-overlay" class="bkash-overlay" style="display:none;">
+        <div class="bkash-modal">
+
+            <div class="bkash-header">
+                <span class="bkash-logo">bKash</span>
+                <button type="button" id="bkash-close" class="bkash-close" aria-label="Close">&times;</button>
+            </div>
+
+            <div id="bkash-step-phone" class="bkash-step">
+                <p class="bkash-title">Confirm Payment</p>
+                <p class="bkash-amount">Amount: <span id="bkash-amount-1"></span></p>
+                <label for="bkash-phone">bKash Account Number</label>
+                <input type="tel" id="bkash-phone" placeholder="01XXXXXXXXX" maxlength="11">
+                <p class="bkash-error" id="bkash-phone-error"></p>
+                <button type="button" id="bkash-phone-next" class="bkash-btn">Proceed</button>
+            </div>
+
+            
+            <div id="bkash-step-pin" class="bkash-step" style="display:none;">
+                <p class="bkash-title">Enter PIN</p>
+                <p class="bkash-amount">Sending <span id="bkash-amount-2"></span> from <span id="bkash-phone-display"></span></p>
+                <label for="bkash-pin">bKash PIN</label>
+                <input type="password" id="bkash-pin" placeholder="Enter PIN" maxlength="5" inputmode="numeric">
+                <p class="bkash-error" id="bkash-pin-error"></p>
+                <p class="bkash-hint">Demo gateway: any 4-5 digit PIN works, except all-same-digit PINs (e.g. 1111), which simulate a declined payment.</p>
+                <button type="button" id="bkash-pin-confirm" class="bkash-btn">Confirm</button>
+            </div>
+
+            
+            <div id="bkash-step-processing" class="bkash-step" style="display:none;">
+                <div class="bkash-spinner"></div>
+                <p class="bkash-title">Processing Payment...</p>
+            </div>
+
+          
+            <div id="bkash-step-success" class="bkash-step" style="display:none;">
+                <p class="bkash-tick">&#10003;</p>
+                <p class="bkash-title">Payment Successful</p>
+                <p class="bkash-amount">Amount: <span id="bkash-amount-3"></span></p>
+                <p class="bkash-trx">Transaction ID: <span id="bkash-trxid"></span></p>
+                <button type="button" id="bkash-done" class="bkash-btn">Done</button>
+            </div>
+
+        </div>
+    </div>
+
+
+   
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

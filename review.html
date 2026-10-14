@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Reviews</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+
+<body>
+
+    <h1>Client Reviews</h1>
+
+    <h2>What our clients say</h2>
+
+    <p>
+        Real feedback from people who lit up their homes with us.
+    </p>
+
+    <p>
+        ⭐⭐⭐⭐⭐ 4.8 out of 5 (120 reviews)
+    </p>
+
+
+    <!-- Write a Review -->
+
+    <h2>Write Your Review</h2>
+
+    <form>
+
+        <label for="name">Your Name:</label><br>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <br><br>
+
+
+        <label for="email">Your Email:</label><br>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <br><br>
+
+
+        <label for="rating">Rating:</label><br>
+
+        <select id="rating" name="rating">
+
+            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+            <option value="4">⭐⭐⭐⭐ - Very Good</option>
+            <option value="3">⭐⭐⭐ - Good</option>
+            <option value="2">⭐⭐ - Average</option>
+            <option value="1">⭐ - Poor</option>
+
+        </select>
+
+        <br><br>
+
+
+        <label for="review">Your Review:</label><br>
+
+        <textarea
+            id="review"
+            name="review"
+            rows="5"
+            cols="40"
+            placeholder="Write something about our product or service..."
+            required
+        ></textarea>
+
+        <br><br>
+
+
+        <button type="submit">
+            Submit Review
+        </button>
+
+    </form>
+
+
+    <hr>
+
+
+    <!-- Existing Reviews -->
+
+    <h2>Customer Reviews</h2>
+
+
+    <!-- Review 1 -->
+
+    <div>
+
+        <h3>⭐⭐⭐⭐⭐ Sadia R.</h3>
+
+        <p>
+            The pendant lamp completely changed our living room.
+            Beautiful craftsmanship.
+        </p>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- Review 2 -->
+
+    <div>
+
+        <h3>⭐⭐⭐⭐ Rafi H.</h3>
+
+        <p>
+            Custom order took a bit longer than expected,
+            but the result was worth it.
+        </p>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- Review 3 -->
+
+    <div>
+
+        <h3>⭐⭐⭐⭐⭐ Nadia K.</h3>
+
+        <p>
+            Great communication throughout and fast delivery.
+            Highly recommend!
+        </p>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
